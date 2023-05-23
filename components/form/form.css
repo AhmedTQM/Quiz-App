@@ -1,0 +1,38 @@
+.qa-container {
+  border: 2px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+}
+.stelledeineFrage {
+  color: rgb(0, 0, 0);
+  font-size: 26px;
+  text-decoration: double underline;
+}
+#question-counter {
+  color: rgb(0, 0, 0);
+}
+#answer-counter {
+  color: rgb(0, 0, 0);
+}
+.yourQuestion {
+  color: rgb(0, 0, 0);
+  text-decoration: double underline;
+  text-decoration-color: rgb(255, 68, 0);
+}
+.submit-qa {
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 20px;
+  transition: 1s;
+}
+.submit-qa:hover {
+  color: white;
+  background-color: black;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index2</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0px;
+      }
+      td {
+        width: 25%;
+        border: solid rgba(58, 51, 51, 0.356) 0.1px;
+        text-align: center;
+        font-size: 24px;
+        font-family: "Black Ops One", cursive;
+      }
+      td:hover {
+        background-color: rgba(108, 81, 63, 0.696);
+        cursor: pointer;
+      }
+      table {
+        width: 100%;
+        height: 70vh;
+        background-color: rgba(9, 9, 9, 0.904);
+        color: white;
+      }
+      #resultArea {
+        height: 20vh;
+        background-color: rgba(65, 54, 54, 0.961);
+        color: white;
+      }
+      #result {
+        background-color: rgb(15, 15, 130);
+      }
+      #result:hover {
+        background-color: rgba(108, 81, 63, 0.696);
+        cursor: pointer;
+      }
+      .highlight {
+        background-color: rgb(34, 31, 31);
+      }
+      #resultArea {
+        font-size: 46px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 24px;
+        box-sizing: border-box;
+        font-family: "Black Ops One", cursive;
+        max-width: 100%;
+        overflow-x: auto;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <script>
+      function resultAreaTyping(operation) {
+        document.getElementById("resultArea").innerHTML += operation;
+      }
+      function resultAreaResultcalculator() {
+        let container = document.getElementById("resultArea");
+        let result = eval(container.innerHTML);
+        container.innerHTML = result;
+      }
+      function deleteLast() {
+        let container = document.getElementById("resultArea");
+        if (container.innerHTML.endsWith(" ")) {
+          container.innerHTML = container.innerHTML.slice(0, -3);
+        } else {
+          container.innerHTML = container.innerHTML.slice(0, -1);
+        }
+      }
+      function deleteAll() {
+        let container = document.getElementById("resultArea");
+        container.innerHTML = "";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="resultArea"></div>
+    <table>
+      <tr>
+        <td onclick="deleteAll()">C</td>
+        <td></td>
+        <td></td>
+        <td onclick="deleteLast()">DEL</td>
+      </tr>
+      <tr>
+        <td onclick="resultAreaTyping(7)">7</td>
+        <td onclick="resultAreaTyping(8)">8</td>
+        <td onclick="resultAreaTyping(9)">9</td>
+        <td onclick="resultAreaTyping(' - ')" class="highlight">-</td>
+      </tr>
+      <tr>
+        <td onclick="resultAreaTyping(6)">6</td>
+        <td onclick="resultAreaTyping(5)">5</td>
+        <td onclick="resultAreaTyping(4)">4</td>
+        <td onclick="resultAreaTyping(' / ')" class="highlight">/</td>
+      </tr>
+      <tr>
+        <td onclick="resultAreaTyping(3)">3</td>
+        <td onclick="resultAreaTyping(2)">2</td>
+        <td onclick="resultAreaTyping(1)">1</td>
+        <td onclick="resultAreaTyping(' * ')" class="highlight">*</td>
+      </tr>
+      <tr>
+        <td onclick="resultAreaTyping(' , ')" class="highlight">,</td>
+        <td onclick="resultAreaTyping(0)">0</td>
+        <td onclick="resultAreaResultcalculator()" id="result">=</td>
+        <td onclick="resultAreaTyping(' + ')" class="highlight">+</td>
+      </tr>
+    </table>
+
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__list-item">
+          <a
+            class="navigation__link"
+            href="/index.html"
+            aria-label="go to home page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewbox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="navigation__list-item">
+          <a
+            class="navigation__link"
+            href="/bookmarks.html"
+            aria-label="go to bookmarks page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewbox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="navigation__list-item navigation__list-item--active">
+          <a
+            class="navigation__link"
+            href="/form.html"
+            aria-label="go to home page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="#000000"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="navigation__list-item">
+          <a
+            class="navigation__link"
+            href="/profile.html"
+            aria-label="go to profile page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewbox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 9c2.7 0 5.8 1.29 6 2v1H6v-.99c.2-.72 3.3-2.01 6-2.01m0-11C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

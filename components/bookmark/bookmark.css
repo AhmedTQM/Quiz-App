@@ -3,12 +3,13 @@
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background: var(--secondary);
+  background: rgb(11, 8, 6);
   color: var(--white);
 }
 
 .bookmark:hover {
   cursor: pointer;
+  box-shadow: black 1px 2px 30px 2px;
 }
 
 .bookmark--active {
@@ -18,4 +19,13 @@
 .bookmark__icon {
   fill: currentcolor;
   width: 2em;
+}
+
+.bookmark.active {
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--secondary);
+  color: black;
 }

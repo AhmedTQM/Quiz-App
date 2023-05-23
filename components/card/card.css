@@ -3,30 +3,42 @@
   padding: 2rem;
   text-align: center;
   position: relative;
+  border-radius: 3%;
 }
 
 .card__question {
   margin: 0 0 2rem;
+  color: rgb(0, 0, 0);
+  border: solid 1px #ff3c00ad;
+  border-radius: 9px;
+  background-color: #ff3c0057;
 }
 
 .card__button-answer {
-  background: var(--secondary);
+  background-color: #ff3c00;
   color: var(--white);
-  border: none;
+  border: solid;
+  border-radius: 30px;
   display: block;
   margin: 0 auto 2rem auto;
   padding: 1rem;
+  font-family: "Black Ops One", cursive;
+  transition: 0.5s;
 }
 
 .card__button-answer:hover {
   opacity: 0.75;
   cursor: pointer;
+  box-shadow: black 0.8px 1.8px 2.8px 2.8px;
 }
 
 .card__answer {
   margin: 0 2rem;
-  font-style: italic;
+  font-family: "Black Ops One", cursive;
   display: none;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
 }
 
 .card__answer--active {
@@ -47,8 +59,25 @@
 }
 
 .card__tag-list-item {
-  background-color: var(--secondary);
+  background-color: #ff3c00;
   color: var(--white);
   border-radius: 4px;
   padding: 0 5px;
+}
+.card__answer {
+  display: none;
+}
+
+.card__answer.visible {
+  display: block;
+  font-weight: bold;
+  background-color: #ff3c00;
+  font-size: 17px;
+  padding: 10px;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+}
+
+.icon-active {
+  fill: rgb(255, 0, 0);
 }

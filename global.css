@@ -32,12 +32,18 @@ h2,
 h3,
 p {
   margin: 0;
+  font-family: "Black Ops One", cursive;
+  background-color: #ffffffa9;
 }
 
 body {
   line-height: 1.5;
   font-family: var(--ff-primary);
   color: var(--black);
+}
+body.darkmode {
+  background-color: #000;
+  color: #fff;
 }
 
 button {

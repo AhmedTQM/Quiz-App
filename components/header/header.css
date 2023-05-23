@@ -5,10 +5,16 @@
   left: 0;
   width: 100%;
   padding: 2rem 0;
-  background: var(--primary);
   border-bottom: 1px solid var(--black);
+  background-color: #fb3b00;
+  color: white;
 }
 
 .header__title {
   text-align: center;
+  background-color: #8a080875;
+  border: solid black 1px;
+}
+.header__title:hover {
+  background-color: rgb(255, 72, 0);
 }
